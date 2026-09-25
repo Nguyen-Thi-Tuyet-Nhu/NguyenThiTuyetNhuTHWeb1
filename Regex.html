@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <span> NOTHINGa TObc SHOW</span>
+    <script>
+    function regeVD1(){
+        var pattern = /[abc]/g;
+        var st = "cab";
+        var array = st.match(pattern);
+        console.log(array);
+    } regeVD1()
+
+
+    function regeVD2(){
+        var C = /gr[ae]y/g;
+        var st = "gray grey groy";
+        var t = st.match(C);
+        console.log(t);
+    }regeVD2()
+
+
+    function regexb1(){
+        var chuoiso = /[135]/g;
+        var str = "12345";
+        var choi = str.match(chuoiso);
+        console.log(choi)
+    }regexb1()
+
+    
+    function regexb2(){
+        var t = /[Hh]ello/g;
+        var st = "Hello hello HELLO"
+        var c = st.match(t);
+        console.log(c);
+
+    }regexb2()
+
+
+    function regexb3(){
+        var t = /[.,!?]/g;
+        var st = "Xin chao, ban khoe khong? Tot!";
+        var c = st.match(t);
+        console.log(c.length);
+    }regexb3()
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>hiiiiiiiiii</span>
+    <script>
+        function regex() {
+            var t = /[^abc]/g;
+            var c = "abcde";
+            var regex = c.match(t);
+            console.log(regex);
+        }
+        regex()
+
+        function regex1() {
+            var t = /[^0-9]/g;
+            var e = "";
+            var c = "a1b2";
+            var regex = c.replace(t, e);
+            console.log(regex)
+        }
+        regex1()
+
+
+        function regex2() {
+            var t = /[^ ]+/g; //+ laf nhieeuf honw 1 chu
+            var c = "xin chao ban";
+            var regex = c.match(t);
+            console.log(regex);
+        }
+        regex2()
+
+
+
+        function regexb1() {
+            var t = /[^aeiou]/g;
+            var c = "programming";
+            var e = "";
+            var regex = c.replace(t, e);
+            console.log(regex);
+        }
+        regexb1()
+
+
+        function regexb2() {
+            var t = /"[^"]+"/g;
+            var e = "xin chao tam biet";
+            //var c = "xin chao";
+            //var e = "tam biet";
+            var regex = e.replace(t);
+            console.log(regex);
+        }
+        regexb2()
+    </script>
+
+</body>
+
+</html>
