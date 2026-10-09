@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đếm số lần click</title>
+</head>
+<body>
+  <button id="btn">Click me!</button>
+  <p id="counter">Số lần click của you: 0</p>
+
+  <script>
+    let count = 0; // biến trạng thái
+
+    const btn = document.querySelector('#btn');
+    const counter = document.querySelector('#counter');
+
+    btn.addEventListener('click', () => {
+      count++; // tăng giá trị
+      counter.textContent = `Số lần click: ${count}`; // cập nhật hiển thị
+    });
+  </script>
+</body>
+</html>

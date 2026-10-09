@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>NUT CLICK</title>
+
+</head>
+<body>
+    <button id = "selector"> selector</button>
+    <p id = "id"> This is iddddddddddddddddddddddddddddd</p>
+
+    <script>
+        var selector = document.querySelector('selector')
+        console.log(selector);
+        var id = document.querySelector('id')
+        console.log(id);
+
+
+
+
+        selector.addEventListener('select', () => {
+            console.log('click');
+            id.style.color = 'blue';
+        }
+    );
+    </script>
+    
+</body>
+</html>
