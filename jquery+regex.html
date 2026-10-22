@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--nhung thu vien-->
+
+<div class="box">
+    <label for="text">nhap chuoi o day</label>
+    <input type="text" id="txt" placeholder="nhap do day di">
+    <button id="btn">Kiem tra</button>
+    <p id="kq">kq</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+function cau1() {
+    $("#btn").on("click", function() {
+        var pattern = /\d$/;
+        var chuoi = $("#txt").val();
+
+        if (pattern.test(chuoi)) {
+            $("#kq").text("dung pattern").css("color", "blue")
+        } else {
+            $("#kq").text("sai pattern").css("color", "red")
+        }
+    })
+}
+cau1()
+
+function cau2() {
+    $("#btn").on("click", function() {
+        var pattern = /^\d{10}$/;
+        var chuoi = $("#txt").val();
+
+        if (pattern.test(chuoi)) {
+            $("#kq").text("dung pattern").css("color", "blue")
+        } else {
+            $("#kq").text("sai pattern").css("color", "red")
+        }
+    })
+}
+cau2()
+
+function cau3() {
+    $("#btn").on("click", function() {
+        var pattern = /^[A-Z_0-9]{5,15}$/;
+        var chuoi = $("#txt").val();
+
+        if (pattern.test(chuoi)) {
+            $("#kq").text("ket qua pattern hop le").css("color", "blue")
+        } else {
+            $("#kq").text("ket qua pattern khong le").css("color", "red")
+        }
+    })
+}
+cau3()
+
+function cau4() {
+    $("#btn").on("click", function() {
+        var pattern = /^0\d{9}$/;
+        var chuoi = $("#txt").val();
+
+        if (pattern.test(chuoi)) {
+            $("#kq").text("dung pattern").css("color", "blue")
+        } else {
+            $("#kq").text("sai pattern").css("color", "red")
+        }
+    })
+}
+cau4()
+
+function cau5() {
+    $("#btn").on("click", function() {
+        var pattern = /^[a-zA-Z0-9]+@[.a-zA-Z]{2,}$/;
+        var chuoi = $("#txt").val();
+
+        if (pattern.test(chuoi)) {
+            $("#kq").text("ket qua pattern hop le").css("color", "blue")
+        } else {
+            $("#kq").text("ket qua pattern khong le").css("color", "red")
+        }
+    })
+}
+cau5()
+function cau5() {
+    $("#btn").on("click", function() {
+        var pattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+        var chuoi = $("#txt").val();
+
+        if (pattern.test(chuoi)) {
+            $("#kq").text("ket qua pattern hop le").css("color", "blue")
+        } else {
+            $("#kq").text("ket qua pattern khong le").css("color", "red")
+        }
+    })
+}
+cau5()
+
+
+function cau6() {
+    $("#btn").on("click", function() {
+        var pattern = /^[A-Z]{2}\d{3}$/;
+        var chuoi = $("#txt").val();
+
+        if (pattern.test(chuoi)) {
+            $("#kq").text("ket qua pattern hop le").css("color", "blue")
+        } else {
+            $("#kq").text("ket qua pattern khong le").css("color", "red")
+        }
+    })
+}
+cau6()
+</script>
+</body>
+</html>
