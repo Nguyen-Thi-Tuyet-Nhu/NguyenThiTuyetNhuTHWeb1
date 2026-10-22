@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ẩn và hiện</title>
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <p id="text">Xin chào, tôi sẽ bị ẩn/hiện!</p>
+    <button id="btn">Ẩn/Hiện</button>
+
+    <script>
+        const text = document.querySelector('#text'); 
+        const btn = document.querySelector('#btn');   
+
+        // Toggle class hidden
+        btn.addEventListener('click', () => {
+            text.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

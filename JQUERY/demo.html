@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookstore Online</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <h1>Chào mừng đến Bookstore Online</h1>
+  <!--1.4 Selectors cơ bản-->
+  <div id="book-list">
+  <div class="book" data-genre="fiction">
+    <h3>Đắc Nhân Tâm</h3>
+    <p class="price">120.000đ</p>
+  </div>
+  <div class="book" data-genre="skill">
+    <h3>Tư Duy Nhanh và Chậm</h3>
+    <p class="price">150.000đ</p>
+  </div>
+  <div class="book" data-genre="fiction">
+    <h3>Nhà Giả Kim</h3>
+    <p class="price">89.000đ</p>
+  </div>
+</div>
+
+  <div>
+    <button id="mua">Mua sách</button>
+    <button id="khong mua"> khong mua sach</button>
+    <input type="checkbox" id = "agree-check">
+  </div>
+
+
+
+
+  <script>
+    $(document).ready(function() {
+      console.log("jQuery đã sẵn sàng!");
+    });
+
+
+    
+
+    $(function() {
+// 1. Đếm số sách hiện có
+    console.log($(".book").length);
+
+// 2. Lấy tất cả sách thể loại fiction
+    $("[data-genre='fiction']").css("border", "2px solid orange");
+
+// 3. Lấy cuốn sách đầu tiên
+    console.log($(".book:first h3").text());
+    });
+
+
+
+    /*thao tác dom*/
+    /* 2.1 Đọc và thay đổi nội dung*/
+// Đọc nội dung
+    console.log($(".book:first h3").text());
+// Thay đổi nội dung text
+    $(".book:first h3").text("Đắc Nhân Tâm (Bản mới)");
+
+// Thay đổi HTML (chèn thẻ được)
+    $(".book:first .price").html("<strong>120.000đ</strong>");
+
+// Lấy/đặt giá trị input
+    $("#search-box").val("Nhà giả kim");
+    console.log($("#search-box").val());
+
+
+
+
+
+///2.2 Thao tác thuộc tính (attr, prop, data)
+
+// Đọc/đặt thuộc tính(attr) đọc hoặc đổi thể loại sách (data-genre)
+    console.log($(".book:first").attr("data-genre"));
+    $(".book:first").attr("data-genre", "self-help");
+
+// Thao tác với dọc/đặt thuộc tính boolean (checked, disabled...)
+$("#mua").click(() => {
+    $("#agree-check").prop("checked", true);
+});
+
+$("#khong mua").click(() =>{
+    $("#agree-check").prop("checked", false);
+});
+
+// Đọc dữ liệu data-*vd: the loai sach
+    console.log($(".book:first").data("genre"));
+
+
+
+
+
+//lay class ="price" doi thanh red
+    $(".price").css("color", "red");
+//lay class ="price" doi thanh red , doi font-weight = bold  
+    $(".price").css({ "color": "red", "font-weight": "bold" });
+
+// Thao tác class
+$(".book:first").addClass("featured");//them 
+
+$(".book:first").removeClass("featured");//xoa
+$(".book:first").toggleClass("featured");//
+console.log($(".book:first").hasClass("featured"));
+
+
+
+
+// Thêm sách mới vào cuối danh sách
+$("#book-list").append(`
+  <div class="book" data-genre="skill">
+    <h3>7 Thói Quen Hiệu Quả</h3>
+    <p class="price">135.000đ</p>
+  </div>
+`);
+
+  </script>
+</body>
+</html>
