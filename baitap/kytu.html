@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // xuống dòng
+        function tabXuongDong() {
+            var pattern = /\t/;
+            var st = "Ten\tTuoi";
+            var arr = st.split(pattern);
+            console.log(arr);
+        }
+
+        tabXuongDong();
+
+
+        // lấy số đứng trước "d" nhưng "d" không nằm trong kết quả
+        function nhintruocthangdinh() {
+            var pattern = /\d+(?=d)/g;
+            var st = "gia 500d, 20 cái";
+            var arr = st.match(pattern);
+            console.log(arr);
+        }
+
+        nhintruocthangdinh();
+
+
+        // mã sinh viên
+        function kiemtra() {
+            var pattern = /^SV-(\d{8})$/;
+            var ma = "SV-24710531";
+            var arr = pattern.test(ma);
+            console.log(arr);
+        }
+
+        kiemtra();
+
+
+        // kiểm tra số điện thoại
+        function ktSDT() {
+            var pattern = /^0\d{9}$/;
+            var soDT = "0778119578";
+            var arr = soDT.match(pattern);
+            console.log(arr);
+        }
+
+        ktSDT();
+
+
+        // KT ĐÚNG SỐ ĐIỆN THOẠI
+        function ktSDT1() {
+            var pattern = /^0\d{9}$/;
+            var soDT = "0778119578";
+            var arr = pattern.test(soDT);
+            console.log(arr);
+        }
+
+        ktSDT1();
+
+    </script>
+</body>
+
+</html>
