@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click</title>
+</head>
+<body>
+    <button id="btnClick">Click</button>
+    <p id="para">paragrap</p>
+
+    <script>
+        // step 1
+        var btnClick = document.querySelector('#btnClick')
+        console.log(btnClick);
+
+        var para = document.querySelector('#para')
+        console.log(para);
+
+        // step 2
+        btnClick.onclick = () => {
+            para.style.backgroundColor = "red"
+        }
+    </script>
+
+</body>
+</html>

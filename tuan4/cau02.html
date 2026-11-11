@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2</title>
+    <style>
+        .display {display: flex;}
+        .disappear {display: none;}
+    </style>
+</head>
+<body>
+    <button id="btnD">disappear</button>
+    <button id="btnshow">show</button>
+    <span id="display">I'm here</span>
+    <script>
+        var btnD = document.getElementById("btnD")
+        var btnShow = document.getElementById("btnshow")
+        var display = document.getElementById("display")
+
+        btnD.onclick = () => {
+            console.log("click")
+            display.classList.add("disappear")
+        }
+
+        btnshow.onclick = () => {
+            console.log("show")
+            display.classList.remove("disappear")
+            display.classList.add("display")
+        }
+    </script>
+</body>
+</html>
